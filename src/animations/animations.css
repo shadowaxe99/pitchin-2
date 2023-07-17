@@ -1,0 +1,58 @@
+/* CSS Animations for Pitch Deck */
+
+/* Hover effect for interactive elements */
+.interactive:hover {
+  transform: scale(1.05);
+  transition: transform .2s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slide-in elements */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn .5s ease-out;
+}
+
+/* Animation for roadmap milestones */
+#roadmapContainer .milestone {
+  animation: milestoneAnimation 1s ease-in-out;
+}
+
+@keyframes milestoneAnimation {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation for pricing calculator */
+#calculatorContainer .pricing-option {
+  animation: pricingAnimation 1s ease-in-out;
+}
+
+@keyframes pricingAnimation {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Animation for forum threads */
+#forumContainer .thread {
+  animation: threadAnimation 1s ease-in-out;
+}
+
+@keyframes threadAnimation {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
